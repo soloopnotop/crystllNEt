@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Network | Welcome</title>
+    <link rel="icon" type="image/png" href="media/dc.png">
+    <link rel="stylesheet" href="media/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <a href="#store" class="desktop_navbar_link">STORE</a>
+      <a href="#discord" class="desktop_navbar_link scroll">DISCORD</a>
+      <a href="#about" class="desktop_navbar_link scroll">TEAM</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="#discord" class="desktop_navbar_link2 scroll">Join</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#store">Store</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Discord</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">Team</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              const menuButton = document.querySelector(".mobile_navbar .icon"); 
+              const navbarLinks = document.querySelector("#mobile_navbar_links"); 
+      
+           
+              menuButton.addEventListener("click", () => {
+                  navbarLinks.classList.toggle("active"); 
+              });
+          });
+      </script>
+      
+    </div>
+    <div class="mainflex">
+      
+      <div class="main1">
+        
+        <div class="stats">
+          <div class="stat">
+              <div class="icon">
+                  <i class="fa-brands fa-discord"></i>
+              </div>
+              <div class="texts">
+                  <h5 class="stat-title">Discord server</h5>
+                  <p><span class="stat-number discord-online-users">None</span> users online</p>
+              </div>
+          </div>
+          <div class="stat">
+              <div class="icon">
+                  <i class="fa-solid fa-server"></i>
+              </div>
+              <div class="texts">
+                  <h5 class="stat-title">Minecraft server</h5>
+                  <p><span class="stat-number minecraft-online-players">None</span> players online</p>
+              </div>
+          </div>
+      </div>
+      
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="media/logo.png" alt="logo">
+        </a>
+        <div class="main1_description">
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">PLAY.CRYSTALNETWORK.FUN</span>
+            <br>
+            <span class="main1_ipcopier_text2">Click to copy</span>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("play.flayermc.fun");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        
+        </div>
+        <a href="#store" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+     
+      
+      <div id="store"></div>
+      <div class="main2">
+       
+        <div class="headline_container">
+          <div class="headline1">Purchase Ranks</div>
+          <div class="subtext1">Get Your Hands on the Most Awesome Minecraft Ranks! Level Up Your Game with Exclusive Perks, Features, and Rewards!</div>
+      </div>
+      <div class="main2_container">
+        
+      
+        <div class="main2_features_div">
+            <div class="main2_feature">
+                <img class="main2_feature_img" src="media/VIPP.png" alt="Feature Image">
+                <div class="main2_feature_headline"> VIP Rank</div>
+                <div class="main2_feature_text">$0.00 USD</div>
+                <a href="https://discord.gg/RTRPp5uxXb">
+                  <button class="purchase_btn">
+                    <i class="fas fa-cart-plus"></i> Purchase
+                  </button>
+                </a>
+            </div>
+            <div class="main2_feature">
+                <img class="main2_feature_img" src="media/VIPP+RANK.png" alt="Feature Image">
+                <div class="main2_feature_headline">VIP+ Rank</div>
+                <div class="main2_feature_text">$0.00 USD</div>
+                <a href="https://discord.gg/RTRPp5uxXb">
+                  <button class="purchase_btn">
+                    <i class="fas fa-cart-plus"></i> Purchase
+                  </button>
+                </a>
+            </div>
+            <div class="main2_feature">
+                <img class="main2_feature_img" src="media/MVPP+RANK.png" alt="Feature Image">
+                <div class="main2_feature_headline">MVP Rank</div>
+                <div class="main2_feature_text">$0.00 USD</div>
+                <a href="https://discord.gg/RTRPp5uxXb">
+                  <button class="purchase_btn">
+                    <i class="fas fa-cart-plus"></i> Purchase
+                  </button>
+                </a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/MVPP+RANK (1).png">
+            <a class="main2_feature_headline">MVP+ Rank</a>
+            <a class="main2_feature_text">$0.00 USD</a>
+            <a href="https://discord.gg/RTRPp5uxXb">
+              <button class="purchase_btn">
+                <i class="fas fa-cart-plus"></i> Purchase
+              </button>
+            </a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="media/CRYTSTALLRANK.png">
+            <a class="main2_feature_headline">Crystal Rank</a>
+            <a class="main2_feature_text">$0.00 USD</a>
+            <a href="https://discord.gg/RTRPp5uxXb">
+              <button class="purchase_btn">
+                <i class="fas fa-cart-plus"></i> Purchase
+              </button>
+            </a>
+          </div>
+          
+        </div> 
+      </div> 
+          
+
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join Our Discord</a>
+        <div class="main4_dc_div">
+          
+          <iframe class="main4_dc_widget" src="https://discord.com/widget?id=1229059598980354048&theme=dark" width="350" height="500" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Stay Connected</a>
+            <a class="main4_dc_description"> ・Connect with fellow players <br> ・Share your creations and ideas <br> ・Get the latest updates <br> ・Participate in exciting events. </a>
+      
+            <img src="media/dc.png" alt="Discord Logo" class="main4_dc_image">
+            
+            <a href="https://discord.gg/RTRPp5uxXb" class="main4_dc_button_a" target="_blank" rel="noopener noreferrer">
+              <div class="main4_dc_button">Join</div>
+            </a>
+            
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Our Team</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="https://cdn.discordapp.com/avatars/1287383613075226659/a_4e7bba12f4f4c979cfddae011dc0c10c?size=1024">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+              <a class="main5_admins_description_title1">ᴍᴇᴛᴀ彡</a>
+              <a class="main5_admins_description"><br>Hi! I am ᴍᴇᴛᴀ彡, Founder & Owner of Crystal Network.</a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="https://cdn.discordapp.com/avatars/1287383613075226659/a_4e7bba12f4f4c979cfddae011dc0c10c?size=1024">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Owner]</a>
+              <a class="main5_admins_description_title2">Amied</a>
+              <a class="main5_admins_description"><br>Hi! I am AMIED, Owner of Crystal Network.</a>
+            </div>
+          </div>
+        </div>
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/avatars/1287383613075226659/a_4e7bba12f4f4c979cfddae011dc0c10c?size=1024">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Manager]</a>
+              <a class="main5_supporters_description_title">Naiwd</a>
+              <a class="main5_supporters_description"><br>Hi! I am Naiwd, Manager of Crystal Network.</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/avatars/1287383613075226659/a_4e7bba12f4f4c979cfddae011dc0c10c?size=1024">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Sr.Admin]</a>
+              <a class="main5_supporters_description_title">Xaraisen</a>
+              <a class="main5_supporters_description"><br>Hi! I am Xaraisen, Sr.Admin of Crystal Network.</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="https://cdn.discordapp.com/avatars/1287383613075226659/a_4e7bba12f4f4c979cfddae011dc0c10c?size=1024">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Admin]</a>
+              <a class="main5_supporters_description_title">Mythical</a>
+              <a class="main5_supporters_description"><br>Hi! I am Mythical, Admin  of Crystal Network.</a>
+            </div>
+          </div>
+      </div>
+
+    <footer class="copyright_div">
+      <a href="https://discord.gg/RTRPp5uxXb" class="copyright">Copyright © S 2025. All Rights Reserved.</a>
+    </footer>
+  </body>
+  <script src="js/script.js"></script>
+</html>
